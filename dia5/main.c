@@ -3,6 +3,6 @@
 
 int main(void)
 {
-  printf("Meu nome é Mateus e eu tenho %i anos\n", 32);
-  calcula_percent(12, 10);
+  int arrayFiveNumbers[5] = {1, 2, 4, 5, 7};
+  printf("O item correto é: %i", pesquisa_binaria(arrayFiveNumbers, 5));
 }
