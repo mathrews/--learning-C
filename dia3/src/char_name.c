@@ -6,4 +6,5 @@ int char_name (void) {
     puts("Enter boyfriend's or girlfriend's name: ");
     scanf("%19s", ex);
     printf("Dear %s.\n\n\tYou're history.\n\n", ex);
+    return 0;
 }
