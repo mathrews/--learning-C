@@ -132,4 +132,5 @@ int main(void) {
   // Para armazenar mais do que um caractere, há uma forma:
   char myText[] = "Hello";
   printf("%s\n\n", myText);
+  return 0;
 }
