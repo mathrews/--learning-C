@@ -67,7 +67,7 @@ int main(void) {
   bool isFishTasty = true;
   const bool DEUS_E_BOM = true;
   const bool CAO_E_CORNO = true;
-  
+
   printf("%d\n", isProgrammingFun == isFishTasty);
   // Os valores booleanos antes de printar eles, deve-se saber que eles são
   // retornados como inteiros. Sendo o "true" o número 1, e o "false" o número
@@ -81,7 +81,16 @@ int main(void) {
 
   printf("%d\n", 10 == 10);
   printf("%d\n", 10 == 15);
-  printf("%d\n", 5 == 55);
+  printf("%d\n\n", 5 == 55);
+
+  // Exemplos reais
+  int myAge = 25;
+  int votingAge = 18;
+  if (myAge >= votingAge) {
+    printf("Old enough to vote!\n");
+  } else {
+    printf("Not old enough to vote!\n");
+  }
 
   return 0;
 }
