@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include "header.h"
 
 int main()
 {
@@ -34,21 +36,57 @@ int main()
   }
   printf("\n");
 
-  // Book solution: 
-  int fahr, celsius;
-  int lower, upper, step;
+  // Book solution:
+  float fahr, celsius;
+  float lower, upper, step;
 
-  lower = 0;
-  upper = 300;
-  step = 20;
+  lower = 0.0;
+  upper = 300.0;
+  step = 20.0;
 
   fahr = lower;
-  while (fahr <= upper) {
-    celsius = 5 * (fahr-32) / 9;
-    printf("%d\t%d\n", fahr, celsius);
+  print_line(20, "mid", "Table of Temps");
+  while (fahr <= upper)
+  {
+    // in C, the division of ints resulting in a type float make happen a truncate of the value:
+    // all fractional parts will be removed.
+    celsius = 5.0 * (fahr - 32.0) / 9.0;
+    printf("F:%.2f \t C:%.2f\n", fahr, celsius);
     fahr = fahr + step;
   }
+  print_line(20, "mid", "");
   printf("\n");
 
   return 0;
+}
+
+void print_line(int number_of_lines, char *position, char *title) {
+    if (strcmp(position, "init") == 0) {
+        printf("%s", title);
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        printf("\n");
+    } else if (strcmp(position, "mid") == 0) {
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        printf("%s", title);
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        printf("\n");
+    } else {
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        for (int i = 0; i < 25; i++) {
+            printf("-");
+        }
+        printf("%s", title);
+        printf("\n");
+    }
 }

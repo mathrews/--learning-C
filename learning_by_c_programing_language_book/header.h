@@ -1,0 +1,1 @@
+void print_line(int number_of_lines, char *position, char *title);
