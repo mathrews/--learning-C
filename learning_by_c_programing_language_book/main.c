@@ -57,6 +57,22 @@ int main()
   print_line(20, "mid", "");
   printf("\n");
 
+  // Chacracter Input and Output
+  int c;
+
+  while ((c = getchar()) != EOF){
+    putchar(c);
+  }
+
+  // Character Counting
+  long nc;
+  nc = 0;
+
+  while (getchar() != EOF) {
+    ++nc;
+  }
+  printf("%ld\n", nc);
+
   return 0;
 }
 
