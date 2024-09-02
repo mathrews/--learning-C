@@ -58,20 +58,22 @@ int main()
   printf("\n");
 
   // Chacracter Input and Output
-  int c;
+  // int c;
 
-  while ((c = getchar()) != EOF){
-    putchar(c);
-  }
+  // while ((c = getchar()) != EOF){
+  //   putchar(c);
+  // }
 
-  // Character Counting
-  long nc;
-  nc = 0;
+  // // Character Counting
+  // long nc;
+  // nc = 0;
 
-  while (getchar() != EOF) {
-    ++nc;
-  }
-  printf("%ld\n", nc);
+  // while (getchar() != EOF) {
+  //   ++nc;
+  // }
+  // printf("%ld\n", nc);
+
+
 
   return 0;
 }
