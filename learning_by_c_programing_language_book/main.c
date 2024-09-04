@@ -57,25 +57,61 @@ int main()
   print_line(20, "mid", "");
   printf("\n");
 
-  // Chacracter Input and Output
-  // int c;
-
-  // while ((c = getchar()) != EOF){
-  //   putchar(c);
-  // }
-
-  // // Character Counting
-  // long nc;
-  // nc = 0;
-
-  // while (getchar() != EOF) {
-  //   ++nc;
-  // }
-  // printf("%ld\n", nc);
-
-
+  count_formats();
 
   return 0;
+}
+
+ // count lines in input
+void count_lines() {
+  int c1, nl;
+
+  nl = 0;
+  while ((c1 = getchar()) != EOF)
+    if (c1 == '\n')
+      ++nl;
+  
+  printf("%d\n", nl);
+}
+
+// Character Counting
+void put_input() {
+  long nc;
+  nc = 0;
+
+  while (getchar() != EOF) {
+    ++nc;
+  }
+  printf("%ld\n", nc);
+}
+
+void count_formats() {
+  int c, bl, tb, nl;
+
+  bl, tb, nl = 0;
+
+  while ((c = getchar()) != EOF) {
+    if (c == '\n') {
+      ++nl;
+    } 
+    if (c == '\t') {
+      ++tb;
+    } 
+    if (c == ' ') {
+      ++bl;
+    }
+  }
+
+  printf("%d, %d, %d\n", nl, tb, bl);
+}
+
+// other way to count chars
+void count_chars() {
+  double nc1;
+
+  for (nc1 = 0; getchar() != EOF; ++nc1);
+
+  printf("%.0f\n\n", nc1);
 }
 
 void print_line(int number_of_lines, char *position, char *title) {
