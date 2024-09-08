@@ -3,3 +3,4 @@ void count_lines();
 void put_input();
 void count_chars();
 void count_formats();
+void split_whitspace(char *word);

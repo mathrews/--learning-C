@@ -57,9 +57,22 @@ int main()
   print_line(20, "mid", "");
   printf("\n");
 
-  count_formats();
+  split_whitspace("Meu nome é Mateus");
 
   return 0;
+}
+
+void split_whitspace(char *word) { 
+  int count_spaces = 0;
+  char word_fix[255];
+  for (int i = 0; i < strlen(word); i++) {
+    if (word[i] != 32) {
+      word_fix += word[i];
+    } else {
+      continue;
+    }
+  }
+  printf("%s\n", word_fix);
 }
 
  // count lines in input
