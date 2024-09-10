@@ -57,22 +57,52 @@ int main()
   print_line(20, "mid", "");
   printf("\n");
 
-  split_whitspace("Meu nome é Mateus");
+  char str[100] = "Isto  é    um   teste     com    espaços  duplos.";
+
+  split_whitspace(str);
 
   return 0;
 }
 
-void split_whitspace(char *word) { 
-  int count_spaces = 0;
-  char word_fix[255];
-  for (int i = 0; i < strlen(word); i++) {
-    if (word[i] != 32) {
-      word_fix += word[i];
-    } else {
-      continue;
+void make_splicit_invisible_chars(char *str) {
+  int i = 0;
+  int len = strlen(str);
+
+  while (i < len) {
+    if (str[i] == 9) {
+      str[i] = "\\t";
+    } else if (str[i] == 8) {
+      str[i] = "\\b";
+    } else if (str[i] == 92) {
+      str[i] = "\\";
     }
   }
-  printf("%s\n", word_fix);
+
+  printf("%s\n", str);
+}
+
+void split_whitspace(char *str) { 
+  int i = 0, j = 0;
+  int len = strlen(str);
+  
+  while (i < len) {
+      // Copia o caractere atual se não for um espaço
+      if (str[i] != ' ') {
+          str[j++] = str[i++];
+      }
+      // Se for espaço, copia apenas o primeiro e ignora os seguintes
+      else {
+          str[j++] = str[i++];
+          // Ignora espaços consecutivos
+          while (str[i] == ' ') {
+              i++;
+          }
+      }
+  }
+  
+  // Adiciona o terminador nulo ao final
+  str[j] = '\0';
+  printf("%s\n", str);
 }
 
  // count lines in input
