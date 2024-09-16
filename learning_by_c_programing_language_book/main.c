@@ -57,26 +57,46 @@ int main()
   print_line(20, "mid", "");
   printf("\n");
 
-  char str[100] = "Isto  é    um   teste     com    espaços  duplos.";
+  char str[100] = "Isto \\é \tum teste \tcom \b\tespaços duplos.";
 
-  split_whitspace(str);
+  make_splicit_invisible_chars(str);
 
   return 0;
 }
 
 void make_splicit_invisible_chars(char *str) {
-  int i = 0;
-  int len = strlen(str);
-
-  while (i < len) {
-    if (str[i] == 9) {
-      str[i] = "\\t";
-    } else if (str[i] == 8) {
-      str[i] = "\\b";
-    } else if (str[i] == 92) {
-      str[i] = "\\";
-    }
+  // Buffer auxiliar que deve ser grande o suficiente para a string expandida
+  char buffer[200];
+  int i = 0, j = 0;
+    
+  while (str[i] != '\0') {
+      // Verifica se o caractere é uma tabulação
+      if (str[i] == '\t') {
+          buffer[j++] = '\\';
+          buffer[j++] = 't';
+      }
+      // Verifica se o caractere é um backspace
+      else if (str[i] == '\b') {
+          buffer[j++] = '\\';
+          buffer[j++] = 'b';
+      }
+      // Verifica se é uma barra invertida
+      else if (str[i] == '\\') {
+          buffer[j++] = '\\';
+          buffer[j++] = '\\';
+      }
+      // Caso contrário, apenas copia o caractere
+      else {
+          buffer[j++] = str[i];
+      }
+      i++;
   }
+  
+  // Adiciona o terminador nulo ao final da nova string
+  buffer[j] = '\0';
+  
+  // Copia o conteúdo do buffer de volta para a string original
+  strcpy(str, buffer);
 
   printf("%s\n", str);
 }
