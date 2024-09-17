@@ -61,6 +61,8 @@ int main()
 
   make_splicit_invisible_chars(str);
 
+  wc();
+
   return 0;
 }
 
