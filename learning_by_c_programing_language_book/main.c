@@ -7,61 +7,62 @@ int main()
 
   // [Chapter 1]
   // Getting Started
-  printf("Hello, world\n\n");
+  // printf("Hello, world\n\n");
   // print in stages:
-  printf("hello, ");
-  printf("world");
-  printf("\n\n");
+  // printf("hello, ");
+  // printf("world");
+  // printf("\n\n");
 
-  // notations strings:
-  printf("Meu \n\t nome \n\t\t é \n\t\t\t \"ENEIAS\"\n caractere apagado com o \\b: blob\b (blob) \n\n");
+  // // notations strings:
+  // printf("Meu \n\t nome \n\t\t é \n\t\t\t \"ENEIAS\"\n caractere apagado com o \\b: blob\b (blob) \n\n");
 
-  // Programa que usa a formula °C=(5/9)(°F-32) para mostrar a tabela de temperaturas Fahrenheit e os Celsius equivalentes:
-  int max = 400;
-  int begin = 1;
-  int interval = 20;
+  // // Programa que usa a formula °C=(5/9)(°F-32) para mostrar a tabela de temperaturas Fahrenheit e os Celsius equivalentes:
+  // int max = 400;
+  // int begin = 1;
+  // int interval = 20;
 
-  while (begin <= 400)
-  {
-    if (begin == 1)
-    {
-      printf("%d\t%.0f\n", begin, (begin - 32) / 1.8);
-      begin += 19;
-    }
-    else
-    {
-      printf("%d\t%.0f\n", begin, (begin - 32) / 1.8);
-      begin += interval;
-    }
-  }
-  printf("\n");
+  // while (begin <= 400)
+  // {
+  //   if (begin == 1)
+  //   {
+  //     printf("%d\t%.0f\n", begin, (begin - 32) / 1.8);
+  //     begin += 19;
+  //   }
+  //   else
+  //   {
+  //     printf("%d\t%.0f\n", begin, (begin - 32) / 1.8);
+  //     begin += interval;
+  //   }
+  // }
+  // printf("\n");
 
-  // Book solution:
-  float fahr, celsius;
-  float lower, upper, step;
+  // // Book solution:
+  // float fahr, celsius;
+  // float lower, upper, step;
 
-  lower = 0.0;
-  upper = 300.0;
-  step = 20.0;
+  // lower = 0.0;
+  // upper = 300.0;
+  // step = 20.0;
 
-  fahr = lower;
-  print_line(20, "mid", "Table of Temps");
-  while (fahr <= upper)
-  {
-    // in C, the division of ints resulting in a type float make happen a truncate of the value:
-    // all fractional parts will be removed.
-    celsius = 5.0 * (fahr - 32.0) / 9.0;
-    printf("F:%.2f \t C:%.2f\n", fahr, celsius);
-    fahr = fahr + step;
-  }
-  print_line(20, "mid", "");
-  printf("\n");
+  // fahr = lower;
+  // print_line(20, "mid", "Table of Temps");
+  // while (fahr <= upper)
+  // {
+  //   // in C, the division of ints resulting in a type float make happen a truncate of the value:
+  //   // all fractional parts will be removed.
+  //   celsius = 5.0 * (fahr - 32.0) / 9.0;
+  //   printf("F:%.2f \t C:%.2f\n", fahr, celsius);
+  //   fahr = fahr + step;
+  // }
+  // print_line(20, "mid", "");
+  // printf("\n");
 
-  char str[100] = "Isto \\é \tum teste \tcom \b\tespaços duplos.";
+  // char str[100] = "Isto \\é \tum teste \tcom \b\tespaços duplos.";
 
-  make_splicit_invisible_chars(str);
+  // make_splicit_invisible_chars(str);
 
-  wc();
+  // wc();
+  word_per_ln();
 
   return 0;
 }

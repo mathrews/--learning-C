@@ -6,3 +6,4 @@ void count_formats();
 void split_whitspace(char *word);
 void make_splicit_invisible_chars(char *str);
 int wc();
+int word_per_ln();
