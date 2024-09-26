@@ -5,39 +5,24 @@
 #define OUT 0
 
 int word_per_ln() {
-    char *str;
-    char buffer[200];
+	char frase[200];
 
-    int c, i, nw, state, j;
-    i = 0;
-    j = 1;
-    nw = 0;
-    state = OUT;
-    while ((c = getchar()) != EOF) {
-        if (c == ' ' || c == '\n' || c == '\t') {
-            state = OUT;
-        } else if (state == OUT) {
-            state = IN;
-            buffer[i] = c;
-        }
-        i++;
-        j++;
-    }
-    buffer[j] = '\0';
-    // Copia o conteúdo do buffer de volta para a string original
-    strcpy(str, buffer);
+	printf("Digite uma frase: ");
+	fgets(frase, sizeof(frase), stdin); // Lê a frase do usuário
 
-    printf("%s\n", str);
+	// Remove a nova linha que fgets pode adicionar
+	frase[strcspn(frase, "\n")] = '\0';
 
-    // char word[200];
-    // for (int i = 0; i < strlen(buffer); i++) {
-    //     if (buffer[i] == ' ' || buffer[i] == '\n' || buffer[i] == '\t') {
-    //         state = OUT;
-    //     } else if (state == OUT) {
-    //         state = IN;
-    //         word[i] = buffer[i];
-    //     }
-    // }
 
-    return 0;
+	char fraseCopia[200];
+	strcpy(fraseCopia, frase); // Copia a frase para evitar modificar a original
+
+	char *palavra = strtok(fraseCopia, " "); // Divide a frase em palavras
+
+	// Imprime cada palavra em uma nova linha
+	while (palavra != NULL) {
+		printf("%s\n", palavra);
+		palavra = strtok(NULL, " ");
+	}
+	return 0;	
 }
