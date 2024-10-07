@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/learning_by_c_programing_book.dir/main.c.o -o learning_by_c_programing_book 

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "header.h"
+#include "./src/header.h"
 
 int main()
 {
@@ -62,7 +62,11 @@ int main()
   // make_splicit_invisible_chars(str);
 
   // wc();
-  word_per_ln();
+  // word_per_ln();
+
+  // occurrency_counter();
+
+  histogram_length();
 
   return 0;
 }
