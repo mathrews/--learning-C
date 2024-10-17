@@ -1,0 +1,3 @@
+/home/dedsec/projects/--learning-C/build/CMakeFiles/learning_by_c_programimg_language.dir
+/home/dedsec/projects/--learning-C/build/CMakeFiles/edit_cache.dir
+/home/dedsec/projects/--learning-C/build/CMakeFiles/rebuild_cache.dir
