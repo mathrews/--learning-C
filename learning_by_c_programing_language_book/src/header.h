@@ -9,3 +9,4 @@ int wc();
 int word_per_ln();
 void occurrency_counter();
 void histogram_length();
+int histogram_dif_chars();
