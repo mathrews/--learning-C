@@ -12,7 +12,7 @@ int histogram_dif_chars() {
     if (c == ' ' || c == '\n' || c == '\t') {
       continue;
     } else {
-      ++letters[c];
+      letters[c] += 1;
     }
   }
 
