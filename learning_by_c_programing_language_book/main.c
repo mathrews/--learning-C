@@ -68,7 +68,38 @@ int main() {
 
   // histogram_length();
 
-  histogram_dif_chars();
+  // histogram_dif_chars();
+
+  degree_calc();
+
+  return 0;
+}
+
+int degree_calc() {
+  float fahr, celsius;
+  float lower, upper, step;
+
+  lower = 0.0;
+  upper = 300.0;
+  step = 20.0;
+
+  fahr = lower;
+  print_line(20, "mid", "Table of Temps");
+  while (fahr <= upper) {
+    celsius = 5.0 * (fahr - 32.0) / 9.0;
+    printf("F:%.2f \t C:%.2f\n", fahr, celsius);
+    fahr = fahr + step;
+  }
+  print_line(20, "mid", "");
+  // printf("\n");
+}
+
+int power_exercise() {
+  int i;
+
+  for (i = 0; i < 10; ++i) {
+    printf("%d %d %d\n", i, power(2, i), power(-3, i));
+  }
 
   return 0;
 }

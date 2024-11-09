@@ -10,3 +10,6 @@ int word_per_ln();
 void occurrency_counter();
 void histogram_length();
 int histogram_dif_chars();
+int power(int base, int y);
+int power_exercise();
+int degree_calc();
