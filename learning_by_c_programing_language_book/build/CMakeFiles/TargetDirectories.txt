@@ -1,3 +1,0 @@
-/home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/build/CMakeFiles/learning_by_c_programing_book.dir
-/home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/build/CMakeFiles/edit_cache.dir
-/home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/build/CMakeFiles/rebuild_cache.dir

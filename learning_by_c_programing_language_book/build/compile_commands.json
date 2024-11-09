@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/build",
-  "command": "/usr/bin/cc   -g -o CMakeFiles/learning_by_c_programing_book.dir/main.c.o -c /home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/main.c",
-  "file": "/home/dedsec/projects/--learning-C/learning_by_c_programing_language_book/main.c",
-  "output": "CMakeFiles/learning_by_c_programing_book.dir/main.c.o"
-}
-]
