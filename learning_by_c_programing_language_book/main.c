@@ -70,7 +70,7 @@ int main() {
 
   // histogram_dif_chars();
 
-  degree_calc();
+  longest_line();
 
   return 0;
 }
